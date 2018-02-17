@@ -21,10 +21,11 @@
 
 <div ng-controller = "TalkController as talk">
    
-    <div id="consoleBox">
+    <div ng-keydown = "talk.key($event)" id="consoleBox">
        <div id="reflection"></div>
-        <p>Good morning, Dave.</p>
+        <p class=" typing">{{talk.currentText}}<span class="blinking-cursor">|</span></p>
     </div>
+    <button ng-click="talk.typewriter()"></button>
     
     
 </div>

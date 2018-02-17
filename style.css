@@ -33,7 +33,7 @@ background-repeat: no-repeat;
     border-color: linear-gradient(to top, grey 0%,black 50%,#000000 50%,white 50%,grey 100%); /* W3C */;
     font-family: 'Share Tech Mono', monospace;
     color: #fff;
-    font-size: 4rem;
+    font-size: 3.2rem;
     margin: 0 2rem 0 2rem;
     
     
@@ -43,3 +43,59 @@ background-repeat: no-repeat;
     margin: 0rem 1rem 0 1rem;
     filter: blur(1px);
 }
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+

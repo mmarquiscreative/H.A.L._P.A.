@@ -1,0 +1,45 @@
+body{
+    background-color: #000;
+height: 100%;
+}
+
+#divider{
+    background: linear-gradient(to top, grey 0%,black 50%,#000000 50%,white 50%,grey 100%); /* W3C */
+    height: 1vh;
+    box-shadow: 3px inset #789;
+}
+#reflection{
+    background: linear-gradient(to bottom, black 0%,grey 30%, black 100%); /* W3C */
+    height: 4vh;
+    
+    box-shadow: inset 0px 0px 10px 1px black;
+    border-radius: 100px;
+    margin-bottom: -4vh;
+}
+
+#halImg {
+height: 70vh;
+background-image: url(Imgs/Hal_Full.jpg);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+#consoleBox {
+    padding: 3px;
+    border: 7px ridge  grey;
+    border-radius: 20px;
+    border-color: linear-gradient(to top, grey 0%,black 50%,#000000 50%,white 50%,grey 100%); /* W3C */;
+    font-family: 'Share Tech Mono', monospace;
+    color: #fff;
+    font-size: 4rem;
+    margin: 0 2rem 0 2rem;
+    
+    
+}
+
+#consoleBox p {
+    margin: 0rem 1rem 0 1rem;
+    filter: blur(1px);
+}

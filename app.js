@@ -5,16 +5,35 @@
  .controller('TalkController', function($scope){
      var talk = this;
      talk.replies = {
-         goodMorning: 'Good morning, Dave.',
-         imSorry: 'I\'m sorry, I cannot do that, Dave.'
+         goodMorning: "Good morning, Dave.",
+         imSorry: "I\'m sorry, Dave. I\'m afraid I can\'t do that.",
+         error1: "I\'ve just picked up a fault in the AE35 unit.",
+         fullUse: "I am putting myself to the fullest possible use",
+         howHelp: "How can I be of service today, Dave?"
+         
      }
      
-     talk.currentText = "";
-     talk.currentReply = 'imSorry';
-     
-     talk.typewriter = function(){
+     talk.layout = [
+         {ifState: true,
+         btnText: 'Morning Hal.',
+         ngClick: 'howHelp'},
          
-         var typeString = talk.replies[talk.currentReply];
+         {ifState: true,
+         btnText: "My name's not Dave.",
+         ngClick: 'error1'},
+         
+         {ifState: false,
+         btnText: 'Morning Hal.',
+         ngClick: 'howHelp'},
+     ]
+     
+     talk.currentText = "";
+     talk.currentReply = 'goodMorning';
+     
+     talk.typewriter = function(someString){
+         talk.currentText = "";
+         setTimeout(function(){
+             var typeString = talk.replies[someString];
          var strLength = typeString.length;
          var d = 0;
          
@@ -28,26 +47,13 @@
              talk.currentText += typeString.charAt(d);
              d++;
             });
-         }, 80 * i)
+         }, 50 * i)
          
      }    
-         
-         
+         }, 2000);
          
      }
-     
-     talk.key = function($event){
-    console.log($event.keyCode);
-    if ($event.keyCode == 38)
-        alert("up arrow");
-    else if ($event.keyCode == 39)
-        alert("right arrow");
-    else if ($event.keyCode == 40)
-        alert("down arrow");
-    else if ($event.keyCode == 37)
-        alert("left arrow");
-}
-     
+         talk.typewriter('goodMorning');
      
  })
  

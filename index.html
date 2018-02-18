@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <title>AngularJS</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ssf5lcy.css">
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link data-require="bootstrap-css" data-semver="3.1.1" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
     
@@ -25,9 +26,14 @@
        <div id="reflection"></div>
         <p class=" typing">{{talk.currentText}}<span class="blinking-cursor">|</span></p>
     </div>
-    <button ng-click="talk.typewriter()"></button>
+    <br/>
+<div id="buttons">
+    <button ng-show="talk.layout[0].ifState" ng-click="talk.typewriter(talk.layout[0].ngClick)">{{talk.layout[0].btnText}}</button>
     
-    
+    <button ng-show="talk.layout[1].ifState" ng-click="talk.typewriter(talk.layout[1].ngClick)">{{talk.layout[1].btnText}}</button>
+        
+    <button ng-show="talk.layout[2].ifState" ng-click="talk.typewriter(talk.layout[2].ngClick)">{{talk.layout[2].btnText}}</button>
+</div>
 </div>
 
 </body>

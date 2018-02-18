@@ -1,3 +1,7 @@
+*{
+    outline: none;
+}
+
 body{
     background-color: #000;
 height: 100%;
@@ -9,11 +13,11 @@ height: 100%;
     box-shadow: 3px inset #789;
 }
 #reflection{
-    background: linear-gradient(to bottom, black 0%,grey 30%, black 100%); /* W3C */
+    background: linear-gradient(to bottom, black 0%,grey 20%, black 100%); /* W3C */
     height: 4vh;
     
     box-shadow: inset 0px 0px 10px 1px black;
-    border-radius: 100px;
+    border-radius: 5px;
     margin-bottom: -4vh;
 }
 
@@ -28,19 +32,19 @@ background-repeat: no-repeat;
 
 #consoleBox {
     padding: 3px;
-    border: 7px ridge  grey;
-    border-radius: 20px;
+    border: 4px groove  grey;
+    border-radius: 10px;
     border-color: linear-gradient(to top, grey 0%,black 50%,#000000 50%,white 50%,grey 100%); /* W3C */;
     font-family: 'Share Tech Mono', monospace;
     color: #fff;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     margin: 0 2rem 0 2rem;
     
     
 }
 
 #consoleBox p {
-    margin: 0rem 1rem 0 1rem;
+    margin: .75rem;
     filter: blur(1px);
 }
 .blinking-cursor {
@@ -99,3 +103,42 @@ background-repeat: no-repeat;
   }
 }
 
+button {
+    padding: 1.5rem;
+    font-family: 'Eurostile', sans-serif;
+    font-weight: bold;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #7C7880 0%, #868B9F 80%,#7C7880 100%);
+    border: 4px solid #7C7880;
+    box-shadow: 1px 0px 5px 2px #222;
+    margin: 1rem;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all .5s;
+        -moz-transition: all 0.5s;
+
+    border-radius: .25rem;
+    display: inline-block;
+
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+
+    background: radial-gradient(#FCECED 0%, #D9CCCF 60%, #7C7880 100%);
+    color: #333;
+        box-shadow: inset 0px 0px 5px 2px #7C7880;
+
+}
+
+#buttons { /* W3C */
+    background-color: #2E313B;
+    padding: 2rem;
+    text-align: center;
+}

@@ -1,5 +1,5 @@
-*{
-    outline: none;
+:focus {
+    outline: 0;
 }
 
 body{
